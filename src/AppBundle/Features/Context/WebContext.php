@@ -15,10 +15,26 @@
  * limitations under the License.
  */
 
-namespace AppBundle;
+namespace AppBundle\Features\Context;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Behat\MinkExtension\Context\MinkContext;
+use Behat\Symfony2Extension\Context\KernelAwareContext;
+use Symfony\Component\HttpKernel\KernelInterface;
 
-class AppBundle extends Bundle
+class WebContext extends MinkContext implements KernelAwareContext
 {
+
+    private $kernel;
+
+    /**
+     * Sets HttpKernel instance.
+     * This method will be automatically called by Symfony2Extension
+     * ContextInitializer.
+     *
+     * @param KernelInterface $kernel
+     */
+    public function setKernel(KernelInterface $kernel)
+    {
+        $this->kernel = $kernel;
+    }
 }
