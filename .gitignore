@@ -1,7 +1,13 @@
+# IDE files #
+#############
+.idea
+
+# Web application ignores #
+###########################
+
 /.web-server-pid
 /app/config/parameters.yml
 /build/
-/phpunit.xml
 /var/*
 !/var/cache
 /var/cache/*
@@ -15,3 +21,13 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+
+# Vagrant files #
+#################
+vagrant.retry
+.vagrant
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
