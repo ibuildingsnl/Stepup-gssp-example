@@ -77,8 +77,3 @@
   copy: src=rsyslog_nginx.conf dest=/etc/rsyslog.d/nginx.conf
   notify: restart rsyslog
 
-# Composer install
-- name: Run Composer installer.
-  command: composer install
-  args:
-     chdir: "{{ app_root }}"

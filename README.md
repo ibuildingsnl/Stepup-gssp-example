@@ -25,6 +25,16 @@ Install
 
 ``` vagrant up ```
 
+Go to the directory inside the VM:
+
+``` vagrant ssh ```
+
+``` cd /vagrant ```
+
+Install composer dependencies:
+
+``` composer install ```
+
 If everything goes as planned you can directly go to:
 
 http://gssp.stepup.example.com
