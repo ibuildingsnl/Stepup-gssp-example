@@ -18,11 +18,22 @@
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Surfnet\SamlBundle\Http\XMLResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
+    /**
+     * TODO implement sso endpoint in a correct manor.
+     *
+     * @Route("/saml/sso", name="sso")
+     */
+    public function ssoAction(Request $request)
+    {
+        return new XMLResponse(null, 500);
+    }
+
     /**
      * @Route("/", name="homepage")
      */

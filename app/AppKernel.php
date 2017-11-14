@@ -13,7 +13,8 @@ class AppKernel extends Kernel
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new \Surfnet\GsspBundle\GsspBundle(),
+            new Surfnet\SamlBundle\SurfnetSamlBundle(),
+            new Surfnet\GsspBundle\SurfnetGsspBundle(),
             new AppBundle\AppBundle(),
         ];
 
