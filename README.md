@@ -19,9 +19,12 @@ Requirements
 - vagrant 1.9.x
 - vagrant-hostsupdater
 - Virtualbox
+- ansible-galaxy
 
 Install
 -------------------
+
+``` ansible-galaxy install -r ansible/requirements.yml -p ansible/roles/ ```
 
 ``` vagrant up ```
 
@@ -37,7 +40,7 @@ Install composer dependencies:
 
 If everything goes as planned you can directly go to:
 
-http://gssp.stepup.example.com
+https://gssp.stepup.example.com
 
 Debugging
 -------------------

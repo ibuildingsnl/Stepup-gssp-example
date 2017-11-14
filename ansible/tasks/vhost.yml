@@ -10,6 +10,10 @@
   become: true
 
 # Put httpd vhost config
+- name: Create ssl
+  include_role:
+    name: openmicroscopy.nginx-ssl-selfsigned
+
 - name: Put httpd vhost config for {{ vhost_name }}
   action: template src='nginx-vhost.conf.j2' dest='/etc/nginx/conf.d/{{ vhost_name }}.conf'
   notify:

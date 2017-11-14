@@ -5,7 +5,7 @@ default:
     extensions:
         Behat\Symfony2Extension: ~
         Behat\MinkExtension:
-            base_url: http://gssp.stepup.example.com
+            base_url: https://gssp.stepup.example.com
             default_session: 'symfony2'
             sessions:
                 symfony2:
