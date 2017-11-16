@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Registreer nieuw account
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="content">
+            <div class="page-header clearfix">
+                <img src="{{  asset('bundles/app/images/example.png') }}" class="pull-left" alt="example" height="74">
+                <img src="{{  asset('bundles/app/images/surfnet.jpg') }}" class="pull-right" alt="SURFnet">
+            </div>
+
+            <h2>Login</h2>
+
+            <button id="button_enrol">Enrol</button>
+
+        </div><!-- /content -->
+
+        <footer>
+            <div class="row-fluid">
+                <div class="span8 offset2">
+                    <hr>
+                    <ul class="nav nav-pills">
+                        {#<li><a href="#" onclick="window.history.back();return false;">{{ 'enrol.cancel' | trans }}</a></li><!-- TODO -->#}
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#button_enrol").click(function(){
+                document.location = "{{ return_url }}";
+            });
+        });
+    </script>
+{% endblock %}

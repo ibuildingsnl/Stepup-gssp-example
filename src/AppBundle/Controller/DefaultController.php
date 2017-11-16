@@ -18,21 +18,11 @@
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Surfnet\SamlBundle\Http\XMLResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    /**
-     * TODO implement sso endpoint in a correct manor.
-     *
-     * @Route("/saml/sso", name="sso")
-     */
-    public function ssoAction(Request $request)
-    {
-        return new XMLResponse(null, 500);
-    }
 
     /**
      * @Route("/", name="homepage")
@@ -42,6 +32,17 @@ class DefaultController extends Controller
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+    /**
+     * @Route("/registration", name="app_identity_registration")
+     */
+    public function registrationAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('AppBundle:default:registration.html.twig', [
+            'return_url' => $this->generateUrl('gssp_saml_sso_return'),
         ]);
     }
 }
