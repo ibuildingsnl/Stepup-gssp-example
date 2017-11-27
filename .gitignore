@@ -26,6 +26,7 @@
 #################
 vagrant.retry
 .vagrant
+ansible/roles
 
 # Code coverage reports #
 #################

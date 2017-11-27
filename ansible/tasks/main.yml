@@ -11,6 +11,7 @@
   with_items:
   - vim
   - composer
+  - git
 
 - name: Install nginx, php-(cli,fpm)
   yum: name={{item}} state=present
